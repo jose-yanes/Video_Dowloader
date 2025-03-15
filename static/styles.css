@@ -20,6 +20,15 @@ body{
     border: 1px #575757;
 }
 
+.submit-btn:hover{
+    background-color: #333333;
+    border: 1px solid #fff;
+}
+
+.submit-btn:active{
+    background-color: #2e7f98;
+    border: 0
+}
 .form-text {
     height: 30px;
     width: 30rem;
@@ -35,8 +44,31 @@ body{
     height: 30vh;
 }
 
-.container{
+body{
     text-align: center;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    margin-bottom: 1vh;
+    font-size: 15px;
+}
+
+a:link, a:visited{
+    color: #2e7f98;
+    /* border: 1px solid #2e7f98; */
+    border-radius: 5px;
+    text-decoration: solid;
+}
+
+a:hover, a:active{
+    color: #fff;
+    text-decoration: wavy #fff underline;
 }
 
 ::placeholder{
