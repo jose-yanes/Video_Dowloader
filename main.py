@@ -14,7 +14,8 @@ def download_url():
     #Creates a dict with the correct format to use in download_url
     url_to_download = {
         "url" : request.form["url"],
-        "format" : request.form["format"]
+        "format" : request.form["format"],
+        "quality" : request.form["video_quality"]
     }
     if "isPlaylist" in request.form:
         url_to_download["is_playlist"] = True

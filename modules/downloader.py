@@ -6,6 +6,7 @@ load_dotenv()
 
 def downloader(urlObj):
     DOWNLOAD_DIRECTORY = os.getenv("DOWNLOAD_DIRECTORY")
+
     
     if urlObj["format"] == "video":
         ydl_opts = {
@@ -13,6 +14,7 @@ def downloader(urlObj):
                 "writethumbnail": True,
                 "embed-thumbnail": True,
                 "outtmpl": "%(channel)s/%(title)s.%(ext)s",
+                # "format": f"bestvideo[height<={choosen_quality}]+bestaudio/best[height<=720]",
                 "postprocessors": [
                     {
                         "key": "FFmpegMetadata",
@@ -31,7 +33,6 @@ def downloader(urlObj):
                 "format": "mp3/bestaudio/best",
                 "writethumbnail": True,
                 "embed-thumbnail": True,
-                #'outtmpl': '%(playlist_index)02d-%(title)s.%(ext)s',
                 "outtmpl": "%(channel)s/%(title)s.%(ext)s",
                 "postprocessors": [
                     {"key": "FFmpegExtractAudio", "preferredcodec": "mp3"},
@@ -39,18 +40,20 @@ def downloader(urlObj):
                     {"key": "FFmpegMetadata", "add_metadata": True},
                 ],
             }
+        
+    
+    if urlObj["quality"]:
+        if urlObj["quality"] != "best":
+            ydl_opts["format"] = f"bestvideo[height<={urlObj["quality"]}]+bestaudio/best[height<={urlObj["quality"]}]"
+
+        
     
     if "is_playlist" in urlObj:
         ydl_opts["outtmpl"] = (
             "%(playlist_title)s/%(playlist_index)02d-%(title)s.%(ext)s"
         )
 
-    print(f"LLegue")
-    print(f"Url Obj {urlObj}")
-
+    print(f"YDL OPTS: {ydl_opts}")
 
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-        error_code = ydl.download(urlObj["url"])
-        
-        
-    
+        ydl.download(urlObj["url"])

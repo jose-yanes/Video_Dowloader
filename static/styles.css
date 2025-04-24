@@ -1,76 +1,82 @@
-h1{
-    font-family: "Cagliostro";
-    font-size: 50px;
-    font-style: bold;
-    color: #2e7f98
+h1 {
+  font-family: "Cagliostro";
+  font-size: 50px;
+  font-style: bold;
+  color: #2e7f98;
 }
 
-body{
-    font-family: "Ubuntu Mono";
-    font-size: 20px;
-    background-color: #121212;
-    color: #fff;
+body {
+  font-family: "Ubuntu Mono";
+  font-size: 20px;
+  background-color: #121212;
+  color: #fff;
 }
 
-.form-buttons{
-    height: 30px;
-    color: #fff;
-    background-color: #3f3f3f;
-    border-radius: 8px;
-    border: 1px #575757;
+.form-buttons {
+  height: 30px;
+  color: #fff;
+  background-color: #3f3f3f;
+  border-radius: 8px;
+  border: 1px #575757;
 }
 
-.submit-btn:hover{
-    background-color: #333333;
-    border: 1px solid #fff;
+.hidden-option {
+  visibility: hidden;
 }
 
-.submit-btn:active{
-    background-color: #2e7f98;
-    border: 0
+.submit-btn:hover {
+  background-color: #333333;
+  border: 1px solid #fff;
+}
+
+.submit-btn:active {
+  background-color: #2e7f98;
+  border: 0;
 }
 .form-text {
-    height: 30px;
-    width: 30rem;
-    border-radius: 8px;
-    color: #8b8b8b;
-    background-color: #282828;
-    border: 1px #282828;
-    text-align: center;
+  height: 30px;
+  width: 30rem;
+  border-radius: 8px;
+  color: #8b8b8b;
+  background-color: #282828;
+  border: 1px #282828;
+  text-align: center;
 }
 
-.avatar{
-    border-radius: 100%;
-    height: 30vh;
+.avatar {
+  border-radius: 100%;
+  height: 30vh;
 }
 
-body{
-    text-align: center;
+body {
+  text-align: center;
 }
 
-footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    text-align: center;
-    margin-bottom: 1vh;
-    font-size: 15px;
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  margin-bottom: 1vh;
+  font-size: 15px;
 }
 
-a:link, a:visited{
-    color: #2e7f98;
-    /* border: 1px solid #2e7f98; */
-    border-radius: 5px;
-    text-decoration: solid;
+a:link,
+a:visited {
+  color: #2e7f98;
+  /* border: 1px solid #2e7f98; */
+  border-radius: 5px;
+  text-decoration: solid;
 }
 
-a:hover, a:active{
-    color: #fff;
-    text-decoration: wavy #fff underline;
+a:hover,
+a:active {
+  color: #fff;
+  text-decoration: wavy #fff underline;
 }
 
-::placeholder{
-    text-align: center;
+::placeholder {
+  text-align: center;
 }
