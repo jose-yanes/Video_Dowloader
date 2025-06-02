@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -26,7 +26,7 @@
         </p>
       </div>
 
-      <div class="form">
+      <div class="form-container">
         <form action="download_url" method="POST">
           <input
             class="form-text"
@@ -36,34 +36,49 @@
             required="true"
           />
 
-          <label for="format">Format:</label>
-          <select
-            class="form-buttons"
-            name="format"
-            id="format"
-            required="true"
-          >
-            <option value="video">Video</option>
-            <option value="audio">Audio</option>
-          </select>
+          <div class="form-controls">
+            <div class="form-options">
+              <div class="option-block">
+                <label for="format">Format:</label>
+                <select
+                  class="form-buttons"
+                  name="format"
+                  id="format"
+                  required="true"
+                >
+                  <option value="video">Video</option>
+                  <option value="audio">Audio</option>
+                </select>
+              </div>
 
-          <select
-            class="form-buttons"
-            name="video_quality"
-            id="video_quality"
-            required="true"
-          >
-            <option value="best">Best</option>
-            <option value="1080">1080p</option>
-            <option value="720">720p</option>
-            <option value="480">480p</option>
-          </select>
+              <div class="option-block">
+                <label for="quality">Quality:</label>
+                <select
+                  class="form-buttons"
+                  name="quality"
+                  id="video_quality"
+                  required="true"
+                >
+                  <option value="best">Best</option>
+                  <option value="1080">1080p</option>
+                  <option value="720">720p</option>
+                  <option value="480">480p</option>
+                </select>
+              </div>
 
-          <label for="isPlaylist">¿Playlist?</label>
-          <input type="checkbox" name="isPlaylist" value="true" />
-          <button class="form-buttons submit-btn" type="submit" id="submit-btn">
-            Download!
-          </button>
+              <div class="option-block">
+                <label for="isPlaylist">¿Playlist?</label>
+                <input type="checkbox" name="isPlaylist" value="true" />
+              </div>
+            </div>
+            <button
+              class="form-buttons submit-btn"
+              type="submit"
+              id="submit-btn"
+            >
+              Download!
+            </button>
+          </div>
         </form>
       </div>
 
